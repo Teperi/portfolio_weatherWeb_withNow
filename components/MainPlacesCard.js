@@ -9,7 +9,6 @@ import {
 
 import './MainPlacesCard.scss';
 
-// TODO: constructor 사용시 문제점 확인
 export default class MainPlacesCard extends React.Component {
   constructor(props) {
     super(props);
