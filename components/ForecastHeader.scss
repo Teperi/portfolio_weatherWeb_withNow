@@ -1,0 +1,29 @@
+@import '../css/responsiveGrid.scss';
+
+.ForecastHeader {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  grid-area: 1 / 1 / 2 / span 2;
+  margin-bottom: 32px;
+  align-items: center;
+  @include respond-to('small') {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  &_text {
+    margin-left: 16px;
+    font-size: 1.2em;
+    @include respond-to('small') {
+      font-size: 1em;
+    }
+  }
+  &_time {
+    margin-left: auto;
+    margin-right: 4px;
+    text-align: center;
+    @include respond-to('small') {
+      font-size: 0.9em;
+      max-width: 80px;
+    }
+  }
+}

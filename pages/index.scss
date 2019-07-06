@@ -1,0 +1,52 @@
+@import '../css/responsiveGrid.scss';
+
+@font-face {
+  font-family: 'SeoulNamsanM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  font-family: 'SeoulNamsanM';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.list {
+  a {
+    text-decoration: none;
+  }
+  &_card_add {
+    height: 160px;
+    overflow: auto;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    border: 4px dashed #f1f1f1;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardList {
+    display: grid;
+    padding: 16px 64px;
+    grid-gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    @include respond-to('medium') {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 16px 32px;
+      grid-gap: 32px 16px;
+    }
+    @include respond-to('small') {
+      grid-template-columns: auto;
+      padding: 16px;
+      grid-gap: 32px;
+    }
+  }
+}
